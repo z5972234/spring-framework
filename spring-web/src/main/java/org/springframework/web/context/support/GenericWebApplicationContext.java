@@ -60,6 +60,8 @@ import org.springframework.web.context.ServletContextAware;
  * @author Juergen Hoeller
  * @author Chris Beams
  * @since 1.2
+ *
+ * 通用web应用上下文
  */
 public class GenericWebApplicationContext extends GenericApplicationContext
 		implements ConfigurableWebApplicationContext, ThemeSource {
@@ -184,8 +186,8 @@ public class GenericWebApplicationContext extends GenericApplicationContext
 	}
 
 	/**
-	 * {@inheritDoc}
-	 * <p>Replace {@code Servlet}-related property sources.
+	 * {@link javax.servlet.ServletContext} 包装成{@link ServletContextPropertySource}
+	 * {@link javax.servlet.ServletConfig} 包装成{@link ServletConfigPropertySource}
 	 */
 	@Override
 	protected void initPropertySources() {

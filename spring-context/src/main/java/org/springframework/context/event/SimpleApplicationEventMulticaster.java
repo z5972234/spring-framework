@@ -45,6 +45,11 @@ import org.springframework.util.ErrorHandler;
  * @author Juergen Hoeller
  * @author Stephane Nicoll
  * @see #setTaskExecutor
+ *
+ * ApplicationEventMulticaster接口的简单实现。
+ * 将所有事件多播到所有注册的监听器，让监听器忽略他们不感​​兴趣的事件。侦听器通常将对传入的事件对象执行相应的instanceof检查。
+ * 默认情况下，所有侦听器在调用线程中被调用。 这带来了恶意侦听器阻塞整个应用程序的危险，但增加了最小的开销。
+ * 指定备用任务执行程序，以使侦听器在不同的线程中执行，例如从线程池中执行
  */
 public class SimpleApplicationEventMulticaster extends AbstractApplicationEventMulticaster {
 

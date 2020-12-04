@@ -33,6 +33,8 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @author Stephane Nicoll
  * @see ApplicationListener
+ *
+ * 事件多播器接口，管理多个ApplicationListener对象，并向其发布事件
  */
 public interface ApplicationEventMulticaster {
 

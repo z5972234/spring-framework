@@ -156,6 +156,8 @@ public interface ConfigurableListableBeanFactory
 	 * Note: This may have left the factory with some beans already initialized!
 	 * Call {@link #destroySingletons()} for full cleanup in this case.
 	 * @see #destroySingletons()
+	 *
+	 * 确保所有非延迟初始单例都实例化，同时考虑到FactoryBeans. 如果需要，通常在工厂设置结束时调用
 	 */
 	void preInstantiateSingletons() throws BeansException;
 

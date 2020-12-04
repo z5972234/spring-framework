@@ -26,13 +26,15 @@ import java.util.EventObject;
  * @author Juergen Hoeller
  * @see org.springframework.context.ApplicationListener
  * @see org.springframework.context.event.EventListener
+ *
+ * Application 事件
  */
 public abstract class ApplicationEvent extends EventObject {
 
 	/** use serialVersionUID from Spring 1.2 for interoperability. */
 	private static final long serialVersionUID = 7099057708183571937L;
 
-	/** System time when the event happened. */
+	/** 事件发生的系统事件 */
 	private final long timestamp;
 
 

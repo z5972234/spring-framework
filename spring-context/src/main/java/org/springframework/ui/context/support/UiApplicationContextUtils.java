@@ -52,6 +52,8 @@ public abstract class UiApplicationContextUtils {
 	 * @param context current application context
 	 * @return the initialized theme source (will never be {@code null})
 	 * @see #THEME_SOURCE_BEAN_NAME
+	 *
+	 * 初始化上下文的ThemeSource，自动检测名称为“themeSource”的bean。 如果找不到这样的bean，将使用默认（空）的ThemeSource。
 	 */
 	public static ThemeSource initThemeSource(ApplicationContext context) {
 		if (context.containsLocalBean(THEME_SOURCE_BEAN_NAME)) {

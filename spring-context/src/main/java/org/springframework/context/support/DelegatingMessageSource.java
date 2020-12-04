@@ -34,6 +34,8 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 1.1.5
  * @see AbstractApplicationContext
+ *
+ * 空的MessageSource ，将所有呼叫委派给父MessageSource。 如果没有父MessageSource可用，它将根本无法解析任何消息。
  */
 public class DelegatingMessageSource extends MessageSourceSupport implements HierarchicalMessageSource {
 

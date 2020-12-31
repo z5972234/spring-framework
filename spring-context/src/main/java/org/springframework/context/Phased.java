@@ -23,6 +23,8 @@ package org.springframework.context;
  * @author Mark Fisher
  * @since 3.0
  * @see SmartLifecycle
+ *
+ * 阶段接口
  */
 public interface Phased {
 

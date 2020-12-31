@@ -200,7 +200,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	/** ResourcePatternResolver used by this context. */
 	private ResourcePatternResolver resourcePatternResolver;
 
-	/** LifecycleProcessor for managing the lifecycle of beans within this context. */
+	/** LifecycleProcessor，用于在此上下文中管理bean的生命周期。*/
 	@Nullable
 	private LifecycleProcessor lifecycleProcessor;
 
@@ -788,8 +788,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	}
 
 	/**
-	 * Initialize the LifecycleProcessor.
-	 * Uses DefaultLifecycleProcessor if none defined in the context.
+	 * 初始化LifecycleProcessor。 如果上下文中未定义，则使用DefaultLifecycleProcessor
 	 * @see org.springframework.context.support.DefaultLifecycleProcessor
 	 */
 	protected void initLifecycleProcessor() {
@@ -891,7 +890,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		// Clear context-level resource caches (such as ASM metadata from scanning).
 		clearResourceCaches();
 
-		// Initialize lifecycle processor for this context.
+		// 初始化上下文的生命周期处理器
 		initLifecycleProcessor();
 
 		// Propagate refresh to lifecycle processor first.
